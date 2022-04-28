@@ -34,4 +34,4 @@ spec:
             claimName: mongodb-db
         - name: mongodb-configdb
           persistentVolumeClaim:
-            claimName: mongodb
+            claimName: mongodb-configdb
