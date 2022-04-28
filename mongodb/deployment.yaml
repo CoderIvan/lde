@@ -24,14 +24,9 @@ spec:
             - name: MONGO_INITDB_ROOT_PASSWORD
               value: root
           volumeMounts:
-            - name: mongodb-db
+            - name: mongodb-pvc
               mountPath: /data/db
-            - name: mongodb-configdb
-              mountPath: /data/configdb
       volumes:
-        - name: mongodb-db
+        - name: mongodb-pvc
           persistentVolumeClaim:
-            claimName: mongodb-db
-        - name: mongodb-configdb
-          persistentVolumeClaim:
-            claimName: mongodb-configdb
+            claimName: mongodb
