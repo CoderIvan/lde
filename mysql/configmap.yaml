@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql
+  namespace: mysql-system
+data:
+  mysqld.cnf: |
+    [mysqld]
+    lower_case_table_names=1
